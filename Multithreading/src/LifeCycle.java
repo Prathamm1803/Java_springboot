@@ -15,8 +15,7 @@ public class LifeCycle {
         System.out.println("After Creation: " + t1.getState()); // NEW
 
         t1.start();
-        System.out.println("After Start(): "
-                + t1.getState()); // RUNNABLE
+        System.out.println("After Start(): " + t1.getState()); // RUNNABLE
 
         // Main thread sleeps for 100 ms
         // Gives child thread time to enter sleep()
