@@ -1,4 +1,4 @@
-class MyThread extends Thread {
+class MyThread1 extends Thread {
     @Override
     public void run() {
         System.out.println("RUNNING");
@@ -11,7 +11,7 @@ class MyThread extends Thread {
 }
 public class LifeCycle {
     public static void main(String[] args) throws InterruptedException {
-        MyThread t1 = new MyThread();
+        MyThread1 t1 = new MyThread1();
         System.out.println("After Creation: " + t1.getState()); // NEW
 
         t1.start();
