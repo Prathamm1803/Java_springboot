@@ -3,14 +3,11 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 class Worker extends Thread {
-
     private final Lock lock;
-
     Worker(String name, Lock lock) {
         super(name);
         this.lock = lock;
     }
-
     @Override
     public void run() {
         try {
@@ -33,12 +30,9 @@ class Worker extends Thread {
         }
     }
 }
-
 public class LocksDemo {
     public static void main(String[] args) {
-
         Lock lock = new ReentrantLock();
-
         Worker t1 = new Worker("Thread-1", lock);
         Worker t2 = new Worker("Thread-2", lock);
 
