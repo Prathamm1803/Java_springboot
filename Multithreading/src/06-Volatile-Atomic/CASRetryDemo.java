@@ -2,27 +2,31 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 class LikeCounter {
-    AtomicReference<Integer> totalCount = new AtomicReference<>(0);
+    // AtomicReference<Integer> totalCount = new AtomicReference<>(0);
+    AtomicInteger totalCount = new AtomicInteger(0);
 
-    Integer currentCount;
-    Integer finalCount;
+    // Integer currentCount;
+    // Integer finalCount;
 
     void like() {
-        while(true) {
+
+        totalCount.incrementAndGet();
+
+        // while(true) {
             //We will capture the latest value of totalCount
-            currentCount = totalCount.get();
+            // currentCount = totalCount.get();
 
             //Increment  like counter by 1
-            finalCount = currentCount + 1;
+            // finalCount = currentCount + 1;
 
             //Check again
-            if (totalCount.compareAndSet(currentCount, finalCount)) {
-                return;
-            };
+            // if (totalCount.compareAndSet(currentCount, finalCount)) {
+            //     return;
+            // };
             //If a thread reaches here, domeone else must have updated their counter value
             //Re-try
-            System.out.println("Conflict detected... retrying!");
-        }
+            // System.out.println("Conflict detected... retrying!");
+        // }
     }
 
     int get () {
