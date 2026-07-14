@@ -21,7 +21,6 @@ public class AtomicReferenceDemo {
         boolean updated = reference.compareAndSet(student1, student2);
 
         System.out.println("Updated Successfully : " + updated);
-
         System.out.println("Current Student : " + reference.get().getName());
     }
 }

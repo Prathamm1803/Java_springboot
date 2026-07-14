@@ -11,7 +11,7 @@ class Student {
     }
 }
 
-public class AtomicReferenceDemo {
+public class AtomicReferenceDemo2 {
     public static void main(String[] args) {
 
         Student alice = new Student("Alice");
