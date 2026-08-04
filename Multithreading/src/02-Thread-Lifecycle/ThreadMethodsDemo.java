@@ -21,7 +21,7 @@ class Worker extends Thread {
     }
 }
 
-public class ThreadMethods {
+public class ThreadMethodsDemo {
     public static void main(String[] args) throws InterruptedException {
 
         Worker t1 = new Worker("Download Thread");
@@ -53,5 +53,6 @@ public class ThreadMethods {
             System.out.println("\nIs Worker Alive? " + t1.isAlive());
 
         System.out.println("\nMain Thread Finished.");
+
     }
 }
