@@ -21,6 +21,12 @@ public class FunctionalInterfaceDemo {
 
         BiFunction<Integer, Integer, Integer> sum = (a, b) -> a+b;
         System.out.println(sum.apply(5, 4));
+
+        UnaryOperator<Integer> sqr = n -> n * n;
+        System.out.println(sqr.apply(5));
+
+        BinaryOperator<Integer> mul = (a, b) -> a * b;
+        System.out.println(mul.apply(5, 4));
     }
 }
 
