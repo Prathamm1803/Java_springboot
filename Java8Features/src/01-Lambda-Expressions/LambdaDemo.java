@@ -25,6 +25,6 @@ public class LambdaDemo {
         System.out.println("Max(3, 5) = " + max.calculate(3, 5));
 
         List<String> names = Arrays.asList("Aman", "Pratham", "Vansh");
-        names.forEach((name) -> System.out.println(name));
+        names.forEach(name -> System.out.println(name));
     }
 }
