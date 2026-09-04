@@ -1,5 +1,5 @@
 class Bank {
-    static synchronized void printMessage(String threadName) {
+    synchronized void printMessage(String threadName) {
         System.out.println(threadName + " entered");
         try {
             Thread.sleep(2000);
