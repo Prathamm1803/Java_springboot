@@ -9,7 +9,5 @@ public class RunnableVsThreadDemo {
         Thread thread = new Thread(new myTask());
         System.out.println("Calling run()...");
         thread.run();
-
-        
     }
 }

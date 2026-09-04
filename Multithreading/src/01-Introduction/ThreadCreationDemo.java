@@ -12,9 +12,9 @@ class myRunnable implements Runnable {
 }
 public class ThreadCreationDemo {
     public static void main(String[] args) {
-        myThread t1 = new myThread();
-        Thread t2= new Thread(new myRunnable());
-        Thread t3 = new Thread(()-> {
+        myThread t1 = new myThread(); //through thread class
+        Thread t2= new Thread(new myRunnable()); //through runnable interface
+        Thread t3 = new Thread(()-> { // through lambda expression
             System.out.println("Lambda: " + Thread.currentThread().getName());
         });
     
