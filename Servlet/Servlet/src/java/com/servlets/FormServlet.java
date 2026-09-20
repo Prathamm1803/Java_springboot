@@ -11,26 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 public class FormServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        resp.setContentType("text/html");
+        PrintWriter out = resp.getWriter();
+        
         String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        String email = req.getParameter("email");
-        String gender = req.getParameter("gender");
-        String course = req.getParameter("course");
+        String course = (String)req.getAttribute("course");
         String terms = req.getParameter("terms");
 
-        resp.setContentType("text/html");
-
-        PrintWriter out = resp.getWriter();
-
         if (terms != null) {
-            out.println("<h3>Form Data:</h3>");
-            out.println("Username: " + username + "<br>");
-            out.println("Password: " + password + "<br>");
-            out.println("Email: " + email + "<br>");
-            out.println("Gender: " + gender + "<br>");
-            out.println("Course: " + course + "<br>");
-            out.println("Terms: " + terms + "<br>");
+            req.setAttribute("username", username);
+            req.setAttribute("course", course);
             
             RequestDispatcher rd = req.getRequestDispatcher("storage");
             rd.forward(req, resp);
