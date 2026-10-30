@@ -26,6 +26,22 @@
         <servlet-name>storage</servlet-name>
         <servlet-class>com.servlets.StorageServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Cookie</servlet-name>
+        <servlet-class>com.servlets.CookieServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReadCookie</servlet-name>
+        <servlet-class>com.servlets.ReadCookieServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Session</servlet-name>
+        <servlet-class>com.servlets.SessionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Profile</servlet-name>
+        <servlet-class>com.servlets.ProfileServlet</servlet-class>
+    </servlet>
     
     <!--mapping-->
     <servlet-mapping>
@@ -47,6 +63,22 @@
     <servlet-mapping>
         <servlet-name>storage</servlet-name>
         <url-pattern>/storage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Cookie</servlet-name>
+        <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReadCookie</servlet-name>
+        <url-pattern>/read-cookie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Session</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Profile</servlet-name>
+        <url-pattern>/profile</url-pattern>
     </servlet-mapping>
     
     <!--WelcomeFile & WelcomeFile List-->
