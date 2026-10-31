@@ -1,10 +1,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import= "java.util.Random, java.io.*" %>>
+<%@taglib prefix= "c" uri= "http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Taglib Directive Example </title>
     </head>
     <body>
         <%@include file= "/WEB-INF/header.jsp" %>     
@@ -13,6 +14,10 @@
            int randNum = rand.nextInt(10); 
         %>
             <%= randNum %>
+            <br>
+            <c:set var="name" value="Pratham Mittal"></c:set>
+            <c:out value="${name}"></c:out>
+        
     </h1>
     </body>
 </html>
